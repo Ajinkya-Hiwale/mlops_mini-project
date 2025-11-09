@@ -16,7 +16,7 @@ import dagshub
 
 dagshub_url = "https://dagshub.com"
 repo_owner = "Ajinkya-Hiwale"
-repo_name = "mlops_miniproj"
+repo_name = "mlops_mini-project"
 
 # Set up MLflow tracking URI
 mlflow.set_tracking_uri(f'{dagshub_url}/{repo_owner}/{repo_name}.mlflow')
