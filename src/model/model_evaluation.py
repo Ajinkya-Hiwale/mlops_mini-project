@@ -11,12 +11,12 @@ import mlflow.sklearn
 import dagshub
 import os
 
-dagshub_token = "69a6b1032fc27dd48cd879ef2a420968a8a171ed"
+dagshub_token = os.getenv("DAGSHUB_PAT")
 if not dagshub_token:
     raise EnvironmentError("DAGSHUB_PAT environment variable is not set")
 
-os.environ["MLFLOW_TRACKING_USERNAME"] = "Ajinkya-Hiwale"
-os.environ["MLFLOW_TRACKING_PASSWORD"] = "69a6b1032fc27dd48cd879ef2a420968a8a171ed"
+os.environ["MLFLOW_TRACKING_USERNAME"] = dagshub_token
+os.environ["MLFLOW_TRACKING_PASSWORD"] = dagshub_token
 
 
 dagshub_url = "https://dagshub.com"
