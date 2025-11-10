@@ -63,6 +63,7 @@ class TestModelLoading(unittest.TestCase):
         self.assertEqual(len(prediction), input_df.shape[0])
         self.assertEqual(len(prediction.shape), 1)  # Assuming a single output column for binary classification
 
+#validating thresholds for performance metrics , if the model meets the expected performance then the test passes
     def test_model_performance(self):
         # Extract features and labels from holdout test data
         X_holdout = self.holdout_data.iloc[:,0:-1]
